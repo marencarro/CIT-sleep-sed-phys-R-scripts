@@ -1,4 +1,5 @@
-# CIT-sleep-sed-phys-R-scripts
+# CIT-sleep-sed-phys-R-scripts (NB page is not yet finished - do not use)
+
 📘 Scripts for the article: “XXX”
 
 XXX
@@ -30,19 +31,21 @@ Required packages:
 
 boot
 
-tidyverse
+lme
 
-ggplot2
+foreign
+
+robCompositions
 
 You can install all required packages with:
 
-install.packages(c("boot", "tidyverse", "ggplot2"))
+install.packages(c("boot", "lme", "robCompositions", "foreign"))
 
 ▶️ How to run
 
 Clone or download this repository.
 
-Open the script scripts/analysis_example.R in RStudio (or any R environment).
+Open the script scripts/XX.R in RStudio (or any R environment).
 
 Run the script to see the workflow using the synthetic dataset.
 
@@ -58,7 +61,7 @@ A synthetic dataset with the same structure is provided in /data_example for dem
 
 For questions regarding the code or analyses, please contact:
 
-Jane Doe – jane.doe@university.edu
+XXX
 
 OR open an issue
  in this repository
