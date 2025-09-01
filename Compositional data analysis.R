@@ -44,7 +44,7 @@ zhv <- pivotCoord(vc[,c("sleep","hvile","lett","hard")], pivotvar=2)
 zle <- pivotCoord(vc[,c("sleep","hvile","lett","hard")], pivotvar=3)
 zha <- pivotCoord(vc[,c("sleep","hvile","lett","hard")], pivotvar=4)
 
-# ser pC%
+# checking
 summary(zsl)
 summary(zhv)
 summary(zle)
@@ -147,7 +147,6 @@ write.table(predframe, file="predframe66.txt", quote=FALSE,
             sep=";", row.names=1:66)
 
 #Predframe mean age = 16
-
 predframe_age16 <- data.frame(
   cit = rep(0:10, 2),
   Sex = rep(c("Kvinne", "Mann"), each = 11),
@@ -186,9 +185,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 collett <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 par(mar=c(bottom=3,left=4,top=2,right=0)+0.1)
 plot(x=0:10, y=rep(.5,11), col="white", axes=FALSE, xlab="CIT score (0-10)",
      ylab="Predicted time in activity (absolute time)", ylim=c(0,1))
@@ -245,11 +244,11 @@ points(x=0:10, y=pred.lm0$phard[pred.lm0$Sex=="Mann"&pred.lm0$alder==17],
        lty=lty.m, lwd=lwd.m, col=colhard, type="o", pch=pch.a17)
 par(mar=c(bottom=5,left=4,top=4,right=2)+0.1)
 
-# Filtr??r kvinner og menn for age = 16 NY
+# Filtr??r females and males for age = 16
 filt_f <- pred.lm0_age16$Sex == "Kvinne"
 filt_m <- pred.lm0_age16$Sex == "Mann"
 
-# Diagram med age = 16 for lm0 (ikke CoDA) NY
+# Diagram with age = 16 for lm0 (not CoDA)
 par(mar=c(5, 4, 2, 8) + 0.1)
 plot(x = 0:10, y = rep(.5, 11), col = "white", axes = FALSE,
      xlab = "CIT severity score (0-10)", xlim = c(0,10),
@@ -288,9 +287,9 @@ abline(v = 0, col = "black")
 axis (1, at = seq(0,10,2), labels = seq(0,10,2), line = 0, lwd = 0, lwd.ticks =1)
 axis (2, las = 1, at = seq(0,1, 0.2), labels = seq (0, 100, 20), line = 0, lwd = 0, lwd.ticks = 1)
 
-# approach 3 begynner antakelig pC% linje 245 i vR-skriptet, med selve modellene
-# pC% linje 250-252. Vi har estimert regresjoner for de tre ilr-ene for sleep,
-# linje 96-101 ovenfor
+# approach 3 starting on line 245 in the Von Rosen script, with the models
+# at line 250-252.
+
 predframe # 66 combinations of sex, age, CIT and pub score
 # see line 260-262 in Von Rosens script
 pred.lma3.sleep.kontrast1 <- predict(lma3.sleep.kontrast1, newdata=predframe)
@@ -1643,5 +1642,6 @@ points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,2],
 points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,3], 
        lty=lty.m, lwd=lwd.bounds, col=colhard, type="o", pch=pch.a17)
 par(mar=c(bottom=5,left=4,top=4,right=2)+0.1)
+
 
 
