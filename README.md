@@ -61,7 +61,8 @@ A synthetic dataset with the same structure is provided in /data_example for dem
 
 For questions regarding the code or analyses, please contact:
 
-XXX
+Maren Werner, 
+macwer@ous-hf.no
 
 OR open an issue
  in this repository
