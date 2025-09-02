@@ -14,7 +14,7 @@ The scripts allow reproduction of the statistical analyses and figures related t
 
 📂 Repository structure
 /scripts
-    analysis_as_is.R        # Original analysis script (without data)
+    Compositional data analysis.R        # Original analysis script (without data)
 /scripts
     analysis_example.R      # Example script with synthetic data
 /data_example
