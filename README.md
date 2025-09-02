@@ -1,5 +1,7 @@
 # CIT-sleep-sed-phys-R-scripts
 
+NB: these scripts are currently preliminary versions
+
 📘 Scripts for the article: “XXX”
 
 XXX
