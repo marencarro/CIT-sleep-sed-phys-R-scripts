@@ -1,5 +1,5 @@
 
-#Ternary plots 
+#Ternary plots - separate for females and males
 
 library(ggtern)
 library(dplyr)
@@ -80,3 +80,4 @@ ggtern(data = Ternary_sample, aes(x = sedentary, y = LIPA, z = MVPA, color = CIT
        x = "Sed", y = "LIPA", z = "MVPA", color = "CIT Sev score (0-10)")+
   scale_color_viridis_c(option = "D", direction = -1)+
   theme_bw()
+
