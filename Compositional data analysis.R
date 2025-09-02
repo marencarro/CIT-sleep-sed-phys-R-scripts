@@ -3,6 +3,10 @@ library(robCompositions)
 library(nlme)
 library(boot)
 
+#In the current script we will be referring to Von Rosens article Analysing 
+#time-use composition as dependent variables in physical activity and 
+#sedentary behaviour research: different compositional data analysis approaches
+#JASSB 2, 23 (2023). https://doi.org/10.1186/s44167-023-00033-5
 
 # getting data file
 ya <- read.spss("YH4AllCohorts_clean_use_paper_1.sav", to.data.frame=TRUE) 
@@ -124,15 +128,15 @@ write.table(round(res0.3,5), file="res0_3.txt", quote=FALSE, sep=";")
 
 # Predicitons
 # Looking at age first
-summary(vc$alder) # 16 seems to be in the middle, 14 a bit low, 17 a bit high
-hist(vc$alder, col="lightgreen") # seems correct
+summary(vc$alder)
+hist(vc$alder, col="lightgreen")
 
 #Prediction data
 names(vc)
 summary(vc[,c("cit","Sex","alder","pub")]) # no missing
 table(vc$cit) # whole numbers 0 til 10
 table(vc$pub) # not whole numbers
-hist(vc$pub,col="lightgreen") # centration around 3 
+hist(vc$pub,col="lightgreen")
 
 #Making prediction dataframe
 predframe <- 
@@ -319,7 +323,7 @@ pred.lma3 <- data.frame(cbind(predframe, pred.lma3.sleep.kontrasts.inv))
 names(pred.lma3)[c(1,3,4)] <- c("cit","alder","pub")
 
 
-# transformerer tilbake age 16 NY
+# back-transformation age 16
 pred.lma3.sleep.kontrasts.inv_age16 <- pivotCoordInv(pred.lma3.sleep.kontrasts_age16)
 names(pred.lma3.sleep.kontrasts.inv_age16) <- c("psleep","phvile","plett","phard")
 
@@ -368,7 +372,6 @@ legend("right",
 par(mar=c(5, 4, 4, 8) + 0.1)
 
 
-
 # diagram with age 14,16,17
 lty.f <- "dotted"
 lty.m <- "solid"
@@ -378,9 +381,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 collett <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 par(mar=c(bottom=3,left=4,top=2,right=0)+0.1)
 plot(x=0:10, y=rep(.5,11), col="white", axes=FALSE, xlab="CIT score (0-10)",
      ylab="predicted activity, approach 3", ylim=c(0,1))
@@ -439,10 +442,9 @@ par(mar=c(bottom=4,left=4,top=0,right=2.5)+0.1)
 
 
 # Looking at the distribution of the pivot coordinates in approach 3
-hist(vc$zsl..sleep_hv.le.ha, col="lightgreen") # thin tales, mostly to the left
-# but mostly symmetrical and good
-hist(vc$zsl..hvile_le.ha, col="lightgreen") # some thin tales, mostly symmetrical
-hist(vc$zsl..lett_ha, col="lightgreen") # a bit thin tale to the right
+hist(vc$zsl..sleep_hv.le.ha, col="lightgreen") 
+hist(vc$zsl..hvile_le.ha, col="lightgreen") 
+hist(vc$zsl..lett_ha, col="lightgreen") 
 
 # saving coefficients and predictions in approach 3 together
 samlet.a3 <- c(lma3.sleep.kontrast1$coef[-1],lma3.sleep.kontrast2$coef[-1],
@@ -1396,9 +1398,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 collett <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 ylow.sleep <- 0.25
 yhigh.sleep <- 0.35
 par(mar=c(bottom=3,left=4,top=0,right=0)+0.1)
@@ -1456,9 +1458,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 collett <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 ylow.hvile <- 0.45
 yhigh.hvile <- 0.55
 predlines.hvile.k.a14 <- 67:77
@@ -1522,9 +1524,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 collett <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 ylow.lett <- 0.14
 yhigh.lett <- 0.21
 predlines.lett.k.a14 <- 133:143
@@ -1588,9 +1590,9 @@ colsleep <- "#A59A6E"
 colhvile <- "#C5D1E9"
 colhard <- "#7BAADF"
 colhard <- "#11317E"
-pch.a14 <- c(17,rep(NA,9),17) # alder 14
-pch.a16 <- c(3,rep(NA,9),3)   # alder 16
-pch.a17 <- c(15,rep(NA,9),15) # alder 17
+pch.a14 <- c(17,rep(NA,9),17) # age 14
+pch.a16 <- c(3,rep(NA,9),3)   # age 16
+pch.a17 <- c(15,rep(NA,9),15) # age 17
 ylow.hard <- 0.02
 yhigh.hard <- 0.04
 predlines.hard.k.a14 <- 199:209
@@ -1642,6 +1644,7 @@ points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,2],
 points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,3], 
        lty=lty.m, lwd=lwd.bounds, col=colhard, type="o", pch=pch.a17)
 par(mar=c(bottom=5,left=4,top=4,right=2)+0.1)
+
 
 
 
