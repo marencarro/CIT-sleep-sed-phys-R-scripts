@@ -19,11 +19,11 @@ The scripts allow reproduction of the statistical analyses and figures related t
     Compositional_data_analysis.R        # Original analysis script (without data)
     Ternary_plots_by_sex.R                # Original analysis script (without data)
 /scripts
-    analysis_example.R      # Example script with synthetic data
+    XX.R      # Example script with synthetic data (?)
 /data_example
-    synthetic_data.csv      # Example dataset (non-sensitive)
+    XX.csv      # Example dataset (non-sensitive) (?)
 /results
-    example_output.png      # Example output from the analysis
+   XX.png      # Example output from the analysis (?)
 README.md
 
 🖥️ Requirements
