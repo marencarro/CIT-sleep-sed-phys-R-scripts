@@ -7,6 +7,7 @@ library(boot)
 #time-use composition as dependent variables in physical activity and 
 #sedentary behaviour research: different compositional data analysis approaches
 #JASSB 2, 23 (2023). https://doi.org/10.1186/s44167-023-00033-5
+#The CoDA in the current script corresponds to approach 3 in Von Rosen
 
 # getting data file
 ya <- read.spss("YH4AllCohorts_clean_use_paper_1.sav", to.data.frame=TRUE) 
@@ -1644,6 +1645,7 @@ points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,2],
 points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,3], 
        lty=lty.m, lwd=lwd.bounds, col=colhard, type="o", pch=pch.a17)
 par(mar=c(bottom=5,left=4,top=4,right=2)+0.1)
+
 
 
 
