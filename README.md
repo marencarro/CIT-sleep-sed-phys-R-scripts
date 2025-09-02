@@ -14,7 +14,8 @@ The scripts allow reproduction of the statistical analyses and figures related t
 
 📂 Repository structure
 /scripts
-    Compositional data analysis.R        # Original analysis script (without data)
+    Compositional_data_analysis.R        # Original analysis script (without data)
+    Ternary_plots_by_sex.R                # Original analysis script (without data)
 /scripts
     analysis_example.R      # Example script with synthetic data
 /data_example
