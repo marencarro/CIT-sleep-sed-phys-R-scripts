@@ -1,4 +1,4 @@
-# CIT-sleep-sed-phys-R-scripts (NB page is not yet finished - do not use)
+# CIT-sleep-sed-phys-R-scripts
 
 📘 Scripts for the article: “XXX”
 
@@ -10,7 +10,7 @@ This repository contains the R scripts used for the analyses in the article:
 
 XXX
 
-The scripts allow reproduction of the statistical analyses and figures presented in the article.
+The scripts allow reproduction of the statistical analyses and figures related to the compositional data analysis presented in the article.
 
 📂 Repository structure
 /scripts
