@@ -24,7 +24,7 @@ The scripts allow reproduction of the statistical analyses and figures related t
 
 R version: ≥ 4.2
 
-Required packages:
+Required packages for CoDA:
 
 boot
 
@@ -34,9 +34,17 @@ foreign
 
 robCompositions
 
+Required packages for ternary plots:
+
+ggtern
+
+dplyr
+
+ggplot2
+
 You can install all required packages with:
 
-install.packages(c("boot", "nlme", "robCompositions", "foreign"))
+install.packages(c("boot", "nlme", "robCompositions", "foreign", "dplyr", "ggtern", "ggplot2"))
 
 ▶️ How to run
 
