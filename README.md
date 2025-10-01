@@ -12,19 +12,13 @@ This repository contains the R scripts used for the analyses in the article:
 
 XXX
 
-The scripts allow reproduction of the statistical analyses and figures related to the compositional data analysis presented in the article.
+The scripts allow reproduction of the statistical analyses and figures related to the compositional data analysis presented in the article. However, we were not able to share the dataset due to confidentiality.
 
 📂 Repository structure
 /scripts
     Compositional_data_analysis.R        # Original analysis script (without data)
     Ternary_plots_by_sex.R                # Original analysis script (without data)
-/scripts
-    XX.R      # Example script with synthetic data (?)
-/data_example
-    XX.csv      # Example dataset (non-sensitive) (?)
-/results
-   XX.png      # Example output from the analysis (?)
-README.md
+
 
 🖥️ Requirements
 
@@ -34,7 +28,7 @@ Required packages:
 
 boot
 
-lme
+nlme
 
 foreign
 
@@ -42,23 +36,19 @@ robCompositions
 
 You can install all required packages with:
 
-install.packages(c("boot", "lme", "robCompositions", "foreign"))
+install.packages(c("boot", "nlme", "robCompositions", "foreign"))
 
 ▶️ How to run
 
 Clone or download this repository.
 
-Open the script scripts/XX.R in RStudio (or any R environment).
-
-Run the script to see the workflow using the synthetic dataset.
+Open the script scripts/XX.R in RStudio (or any R environment) and apply to own data.
 
 To fully reproduce the article’s results, access to the original data is required (not publicly available due to confidentiality).
 
 🔒 Data availability
 
 The original dataset cannot be shared due to ethical and privacy restrictions.
-
-A synthetic dataset with the same structure is provided in /data_example for demonstration purposes.
 
 📬 Contact
 
