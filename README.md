@@ -42,7 +42,7 @@ install.packages(c("boot", "nlme", "robCompositions", "foreign"))
 
 Clone or download this repository.
 
-Open the script scripts/XX.R in RStudio (or any R environment) and apply to own data.
+Open the script in RStudio (or any R environment) and apply to own data.
 
 To fully reproduce the article’s results, access to the original data is required (not publicly available due to confidentiality).
 
