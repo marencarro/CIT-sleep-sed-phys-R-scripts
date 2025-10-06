@@ -2,15 +2,13 @@
 
 NB: these scripts are currently preliminary versions
 
-📘 Scripts for the article: “XXX”
-
-XXX
+📘 Scripts for the article: “Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study.”
 
 📄 Description
 
 This repository contains the R scripts used for the analyses in the article:
 
-XXX
+Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study. (preliminary title, not published).
 
 The scripts allow reproduction of the statistical analyses and figures related to the compositional data analysis presented in the article. However, we were not able to share the dataset due to confidentiality.
 
