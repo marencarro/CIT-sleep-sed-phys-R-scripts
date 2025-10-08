@@ -56,6 +56,18 @@ To fully reproduce the article’s results, access to the original data is requi
 
 The original dataset cannot be shared due to ethical and privacy restrictions.
 
+Variable names in Compositional_data_analysis.R:
+
+Sample_paper1_mainanalysis_SleepSedLIPAMVPA: filter variable
+mean_PubDevScore_hr: pubertal development score, covariate
+CIT_Sev_index_010: childhood interpersonal trauma score, exposure variable 
+Alder_deltakelse_YH4: Age at inclusion
+PID.XXXXX: ID variable 
+sleepMean3: mean time in sleep (s)
+hvileMean3: mean time in sedentary behaviour (s)
+lettMean3: mean time in LIPA (s)
+hardMean3: mean time in MVPA (s)
+
 📬 Contact
 
 For questions regarding the code or analyses, please contact:
