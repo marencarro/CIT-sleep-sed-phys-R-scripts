@@ -17,7 +17,7 @@ vt <- ya[ya$Sample_paper1_mainanalysis_SleepSedLIPAMVPA=="Included"&
            is.na(ya$mean_PubDevScore_hr)==0&is.na(ya$CIT_Sev_index_010)==0,]
 
 # converting variable names
-vt$id <- vt$PID.114875
+vt$id <- vt$PID.XXXXX
 vt$alder <- vt$Alder_deltakelse_YH4
 vt$cit <- vt$CIT_Sev_index_010
 vt$pub <- vt$mean_PubDevScore_hr
@@ -1645,6 +1645,7 @@ points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,2],
 points(x=0:10, y=samlet.a3.est.ci.pred[predlines.hard.m.a17,3], 
        lty=lty.m, lwd=lwd.bounds, col=colhard, type="o", pch=pch.a17)
 par(mar=c(bottom=5,left=4,top=4,right=2)+0.1)
+
 
 
 
