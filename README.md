@@ -1,14 +1,12 @@
 # CIT-sleep-sed-phys-R-scripts
 
-NB: these scripts are currently preliminary versions
-
-📘 Scripts for the article: “Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study.”
+📘 Scripts for the article: “Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study.” (preliminary title, article not published)
 
 📄 Description
 
 This repository contains the R scripts used for the analyses in the article:
 
-Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study. (preliminary title, not published).
+Childhood Interpersonal Trauma and Adolescent Sleep–Activity Patterns: Findings from the HUNT Study. (preliminary title, article not published).
 
 The scripts allow reproduction of the statistical analyses and figures related to the compositional data analysis presented in the article. However, we were not able to share the dataset due to confidentiality.
 
